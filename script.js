@@ -26,8 +26,8 @@ var Counter = React.createClass({
     }
 });
 
-var element = React.createElement(Counter);
-var element2 = React.createElement(Counter);
+var element = React.createElement('div', {}, 
+    React.createElement(Counter),
+    React.createElement(Counter));
 
 ReactDOM.render(element, document.getElementById('app'));
-ReactDOM.render(element2, document.getElementById('app2'));
